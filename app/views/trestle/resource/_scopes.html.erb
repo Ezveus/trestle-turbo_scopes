@@ -1,0 +1,7 @@
+<% if admin.turbo_scopesable? %>
+  <div id="turbo-scopes">
+    <%= I18n.t('trestle.turbo_scopes.loading', default: 'Loading scopes... Please wait!') %>
+  </div>
+<% else %>
+  <%= render partial: 'trestle/turbo_scopes/turbo_scopes' %>
+<% end %>
