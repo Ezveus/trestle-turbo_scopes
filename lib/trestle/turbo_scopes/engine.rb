@@ -10,7 +10,7 @@ module Trestle
         Trestle::Resource::Builder.send(:include, Trestle::TurboScopes::Builder)
       end
 
-      config.assets.precompile << "trestle-turbo_scopes.js"
+      config.assets.precompile << "trestle-turbo_scopes.js" if defined?(Sprockets)
     end
   end
 end
