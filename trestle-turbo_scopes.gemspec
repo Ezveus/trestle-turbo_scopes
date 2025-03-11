@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.metadata["source_code_uri"] = "https://github.com/Ezveus/trestle-turbo_scopes"
 
   spec.add_dependency "trestle", ">= 0.9", "< 1"
-  spec.add_dependency 'turbo-rails', '~> 1.1'
+  spec.add_dependency 'turbo-rails', '>= 1.1'
 
   spec.add_development_dependency "rspec-rails"
 end
