@@ -22,7 +22,7 @@ module Trestle
             get :turbo_scopes, on: :collection
           end
 
-          admin.scopes.apply_options!(options)
+          admin.scopes.options.merge!(options)
           admin.scopes.append(**defaults, &block) if block_given?
         end
       end
