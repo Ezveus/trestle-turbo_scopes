@@ -20,8 +20,14 @@ Trestle.resource(:articles) do
   scopes do
     scope :all, default: true, label: t('activerecord.attributes.article.all')
 
+    # Enum Example
+    Article.categories.each do |category, _|
+      scope category, label: t(category, scope: 'activerecord.attributes.article')
+    end
+
+    # Array Example
     Article.categories.each do |category|
-      scope action, label: t(category, scope: 'activerecord.attributes.article')
+      scope category, label: t(category, scope: 'activerecord.attributes.article')
     end
   end
 end
